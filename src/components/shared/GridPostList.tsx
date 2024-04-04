@@ -1,5 +1,5 @@
 
-import { useUserContext } from '@/context/AuthContext'
+// import { useUserContext } from '@/context/AuthContext'
 import { Models } from 'appwrite'
 // import React from 'react'
 import { Link } from 'react-router-dom'
@@ -12,8 +12,10 @@ type GridPostListProps = {
     showStats?:boolean;
 }
 
-const GridPostList = ({posts,showUser = true , showStats = true}:GridPostListProps) => {
-    const {user} = useUserContext
+const GridPostList = ({posts,showUser = true , 
+    // showStats = true
+}:GridPostListProps) => {
+    // const {user} = useUserContext
   return (
     <ul className='grid-container'>
      {posts.map((post)=>(
