@@ -1,7 +1,7 @@
 
 import { useUserContext } from '@/context/AuthContext'
 import { Models } from 'appwrite'
-import React from 'react'
+// import React from 'react'
 import { Link } from 'react-router-dom'
 import PostStats from './PostStats'
 
