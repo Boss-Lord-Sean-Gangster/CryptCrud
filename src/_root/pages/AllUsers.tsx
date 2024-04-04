@@ -1,7 +1,9 @@
 
 const AllUsers = () => {
   return (
-    <div>AllUsers</div>
+    <div className='flex align-center justify-center w-full h-full '>
+      <h2 >COMING SOON....</h2>
+    </div>
   )
 }
 
