@@ -1,4 +1,6 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, 
+        // useNavigate
+       } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +17,7 @@ import { multiFormatDateString } from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
 
 const PostDetails = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { id } = useParams();
   const { user } = useUserContext();
 
