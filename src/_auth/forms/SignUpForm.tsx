@@ -12,6 +12,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations";
 import { SignUpValidation } from "@/lib/validation";
 import { useUserContext } from "@/context/AuthContext";
+import { ID } from "appwrite";
 
 const SignupForm = () => {
   const { toast } = useToast();
@@ -35,7 +36,7 @@ const SignupForm = () => {
   // Handler
   const handleSignup = async (user: z.infer<typeof SignUpValidation>) => {
     try {
-      const newUser = await createUserAccount(user);
+      const newUser = await createUserAccount({id:ID.unique(),...user});
 
       if (!newUser) {
         toast({ title: "Sign up failed. Please try again.", });
